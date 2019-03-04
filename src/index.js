@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import PropTypes from 'prop-types';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+function AddressLabel({ person }) {
+	return(
+		<div className='address-label'>This is the label.</div>
+	);
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+ReactDOM.render(
+	<AddressLabel/>,
+	document.querySelector('#root'));
