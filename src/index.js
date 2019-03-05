@@ -3,8 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import PropTypes from 'prop-types';
 
-//TODO: Split the envelope component/subcomponents into its own file and import, 
-//then do the same for the rest of the exercises
+/*TODO: 
+-Split the envelope component/subcomponents into its own file and import, 
+then do the same for the rest of the exercises
+-add propTypes to each component
+*/
+
 
 function Envelope({ toPerson, fromPerson}) {
 	return(
