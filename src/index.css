@@ -48,6 +48,8 @@ credit card styles
 	padding: 15px;
 	background-color: #1759c4;
 	color: white;
+	font-family: 'courier';
+	font-weight: 100;
 }
 
 .bank-name {
@@ -55,6 +57,8 @@ credit card styles
 	top: 30px;
 	left: 200px;
 	font-size: 2.5em;
+	font-family: 'Helvetica';
+	font-weight: initial;
 }
 
 .card-number {
@@ -64,15 +68,33 @@ credit card styles
 	font-size: 2em;
 }
 
+.card-number-prefix {
+	position: absolute;
+	top: 40px;
+	font-size: .5em;
+	font-family: 'Helvetica';
+}
+
 .expiration-date {
 	position: absolute;
 	top: 210px;
 	left: 200px;
+	font-size: 1.5em;
+
+}
+
+.expiration-date-prefix {
+	position: absolute;
+	font-size: 8px;
+	font-family: 'Helvetica';
+	left: -25px;
+	top: 5px;
 }
 
 .cardholder-name {
 	position: absolute;
 	left: 30px;
 	top: 240px;
+	font-size: 1.5em;
 }
 

@@ -35,13 +35,22 @@ function BankName({ bankName }) {
 
 function ExpirationDate({ date }) {
 	return(
-		<div className="expiration-date">{date}</div>
+		<div className="expiration-date">
+			<div className="expiration-date-prefix">
+				<div>VALID</div>
+				<div>THRU</div>
+			</div>
+			<div>{date}</div>
+		</div>
 	);
 }
 
 function CardNumber ({ cardNumber }) {
 	return(
-		<div className="card-number">{cardNumber}</div>
+		<div className="card-number">
+			<div>{cardNumber}</div>
+			<div className="card-number-prefix">{cardNumber.slice(0, 4)}</div>
+		</div>
 	);
 }
 
