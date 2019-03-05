@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import PropTypes from 'prop-types';
 
-
+//TODO: Split the envelope into its own file and import, 
+//do the same for the rest of the exercises
 
 function Envelope({ toPerson, fromPerson}) {
 	return(
