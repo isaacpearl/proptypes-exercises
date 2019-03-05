@@ -1,3 +1,7 @@
+/*
+envelope styles
+*/
+
 .envelope {
 	width: 650px;
 	height: 300px;
@@ -32,7 +36,6 @@
 }
 
 /*
-TODO:
-	-potentially refactor this whole thing to use flexbox 
-	or a different css technique?
+credit card styles
 */
+

@@ -9,7 +9,34 @@ then do the same for the rest of the exercises
 -add propTypes to each component
 */
 
+//CREDIT CARD
+function CreditCard({ cardInfo }) {
+	return(
+		<div className="credit-card">
+			
 
+		</div>
+	);
+}
+
+
+
+
+
+var testCardInfo = {
+	name: "K.K. Slider",
+	expirationDate: "12/19",
+	cardNumber: "1234 5678 8765 4321",
+	bankName: "Best Bank"
+}
+
+
+
+
+
+
+
+//ENVELOPE
 function Envelope({ toPerson, fromPerson}) {
 	return(
 		<div className='envelope'>
@@ -29,6 +56,18 @@ function AddressLabel({ person }) {
 		</div>
 	);
 }
+AddressLabel.propTypes = {
+	person: PropTypes.shape(
+	{
+		name: PropTypes.string.isRequired,
+		address: PropTypes.shape({
+			street: PropTypes.string.isRequired,
+			city: PropTypes.string.isRequired,
+			state: PropTypes.string.isRequired,
+			zipCode: PropTypes.string.isRequired
+		}).isRequired
+	}).isRequired
+}
 
 function Stamp() {
 	return(
@@ -36,14 +75,13 @@ function Stamp() {
 	)
 }
 
-
 var testToPerson = {
 	name: "Good Friend",
 	address: {
 		street: "808 Beet St.",
 		city: "Wendell",
 		state: "MA",
-		zipCode: "00000"
+		zipCode: '00000'
 	}
 }
 
@@ -53,7 +91,7 @@ var testFromPerson = {
 		street: "909 Dub Ct.",
 		city: "Los Angeles",
 		state: "CA",
-		zipCode: "99999"
+		zipCode: '99999'
 	}
 }
 
@@ -61,3 +99,8 @@ var testFromPerson = {
 ReactDOM.render(
 	<Envelope toPerson = {testToPerson} fromPerson={testFromPerson}/>,
 	document.querySelector('#root'));
+
+
+
+
+
