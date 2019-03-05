@@ -4,63 +4,10 @@ import './index.css';
 import PropTypes from 'prop-types';
 
 /*TODO: 
--Split the envelope and credit card component/subcomponents into their own files and import, 
+-Split the envelope/credit card/poster component/subcomponents into their own files and import, 
 then do the same for the rest of the exercises
 -add propTypes
 */
-
-//CREDIT CARD
-function CreditCard({ cardInfo }) {
-	return(
-		<div className="credit-card">
-			<BankName bankName={cardInfo.bankName}/>
-			<CardNumber cardNumber={cardInfo.cardNumber}/>
-			<ExpirationDate date={cardInfo.expirationDate}/>
-			<CardholderName name={cardInfo.name}/>
-		</div>
-	);
-}
-
-function CardholderName({ name }) {
-	return(
-		<div className="cardholder-name">{name}</div>
-	);
-}
-
-function BankName({ bankName }) {
-	return(
-		<div className="bank-name">{bankName}</div>
-	);
-}
-
-function ExpirationDate({ date }) {
-	return(
-		<div className="expiration-date">
-			<div className="expiration-date-prefix">
-				<div>VALID</div>
-				<div>THRU</div>
-			</div>
-			<div>{date}</div>
-		</div>
-	);
-}
-
-function CardNumber ({ cardNumber }) {
-	return(
-		<div className="card-number">
-			<div>{cardNumber}</div>
-			<div className="card-number-prefix">{cardNumber.slice(0, 4)}</div>
-		</div>
-	);
-}
-
-var testCardInfo = {
-	name: "K.K. Slider",
-	expirationDate: "12/19",
-	cardNumber: "1234 5678 8765 4321",
-	bankName: "Best Bank"
-}
-
 
 //ENVELOPE
 function Envelope({ toPerson, fromPerson}) {
@@ -121,10 +68,81 @@ var testFromPerson = {
 	}
 }
 
+
+//CREDIT CARD
+function CreditCard({ cardInfo }) {
+	return(
+		<div className="credit-card">
+			<BankName bankName={cardInfo.bankName}/>
+			<CardNumber cardNumber={cardInfo.cardNumber}/>
+			<ExpirationDate date={cardInfo.expirationDate}/>
+			<CardholderName name={cardInfo.name}/>
+		</div>
+	);
+}
+
+function CardholderName({ name }) {
+	return(
+		<div className="cardholder-name">{name}</div>
+	);
+}
+
+function BankName({ bankName }) {
+	return(
+		<div className="bank-name">{bankName}</div>
+	);
+}
+
+function ExpirationDate({ date }) {
+	return(
+		<div className="expiration-date">
+			<div className="expiration-date-prefix">
+				<div>VALID</div>
+				<div>THRU</div>
+			</div>
+			<div>{date}</div>
+		</div>
+	);
+}
+
+function CardNumber ({ cardNumber }) {
+	return(
+		<div className="card-number">
+			<div>{cardNumber}</div>
+			<div className="card-number-prefix">{cardNumber.slice(0, 4)}</div>
+		</div>
+	);
+}
+
+var testCardInfo = {
+	name: "K.K. Slider",
+	expirationDate: "12/19",
+	cardNumber: "1234 5678 8765 4321",
+	bankName: "Best Bank"
+}
+
+
+//POSTER
+function Poster ({ image, title, text }) {
+	return (
+		<div className="poster">
+			{image}
+			{title}
+			{text}
+		</div>
+
+	);
+}
+
+var testPosterImage = 0;
+var testPosterTitle = "PROGRAMMING"
+var testPosterText = "Not even once."
+
 ReactDOM.render(
 	<div>
 		<Envelope toPerson = {testToPerson} fromPerson={testFromPerson}/>
 		<CreditCard cardInfo = {testCardInfo}/>
+		<Poster image = {testPosterImage} title = {testPosterTitle} text = {testPosterText}/>
 	</div>,
 	document.querySelector('#root'));
 
