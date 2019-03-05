@@ -102,5 +102,33 @@ credit card styles
 poster styles
 */
 
+.poster {
+	position: relative;
+	background-color: black;
+	width: 600px;
+	height: 430px;
+	margin: 15px;
+	border: 2px solid #1759c4;
+	text-align: center;
+}
+
+.poster-image > img {
+	height: auto;
+	width: 450px;
+	border: 2px solid #1759c4;
+	margin-top: 30px;
+}
+
+.poster-title {
+	color: #1759c4;
+	font-family: Serif;
+	font-size: 3em;
+}
+
+.poster-text {
+	color: grey;
+	font-family: Arial;
+	font-size: 1.5em;
+}
 
 

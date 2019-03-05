@@ -124,17 +124,36 @@ var testCardInfo = {
 
 //POSTER
 function Poster ({ image, title, text }) {
-	return (
+	return(
 		<div className="poster">
-			{image}
-			{title}
-			{text}
+			<PosterImage image={image}/>
+			<PosterTitle title={title}/>
+			<PosterText text={text}/>
 		</div>
-
 	);
 }
 
-var testPosterImage = 0;
+function PosterImage({ image }) {
+	return(
+		<div className="poster-image">
+			<img src={image} alt="code on screen"/>
+		</div>
+	)
+}
+
+function PosterTitle({ title }) {
+	return(
+		<div className="poster-title">{title}</div>
+	)
+}
+
+function PosterText({ text }) {
+	return(
+		<div className="poster-text">{text}</div>
+	)
+}
+
+var testPosterImage = "https://marketingweek.imgix.net/content/uploads/2017/05/12103909/Coding-body-image-.jpg";
 var testPosterTitle = "PROGRAMMING"
 var testPosterText = "Not even once."
 
