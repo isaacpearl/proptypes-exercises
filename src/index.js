@@ -4,24 +4,46 @@ import './index.css';
 import PropTypes from 'prop-types';
 
 /*TODO: 
--Split the envelope component/subcomponents into its own file and import, 
+-Split the envelope and credit card component/subcomponents into their own files and import, 
 then do the same for the rest of the exercises
--add propTypes to each component
+-add propTypes
 */
 
 //CREDIT CARD
 function CreditCard({ cardInfo }) {
 	return(
 		<div className="credit-card">
-			
-
+			<BankName bankName={cardInfo.bankName}/>
+			<CardNumber cardNumber={cardInfo.cardNumber}/>
+			<ExpirationDate date={cardInfo.expirationDate}/>
+			<CardholderName name={cardInfo.name}/>
 		</div>
 	);
 }
 
+function CardholderName({ name }) {
+	return(
+		<div className="cardholder-name">{name}</div>
+	);
+}
 
+function BankName({ bankName }) {
+	return(
+		<div className="bank-name">{bankName}</div>
+	);
+}
 
+function ExpirationDate({ date }) {
+	return(
+		<div className="expiration-date">{date}</div>
+	);
+}
 
+function CardNumber ({ cardNumber }) {
+	return(
+		<div className="card-number">{cardNumber}</div>
+	);
+}
 
 var testCardInfo = {
 	name: "K.K. Slider",
@@ -29,11 +51,6 @@ var testCardInfo = {
 	cardNumber: "1234 5678 8765 4321",
 	bankName: "Best Bank"
 }
-
-
-
-
-
 
 
 //ENVELOPE
@@ -95,9 +112,11 @@ var testFromPerson = {
 	}
 }
 
-
 ReactDOM.render(
-	<Envelope toPerson = {testToPerson} fromPerson={testFromPerson}/>,
+	<div>
+		<Envelope toPerson = {testToPerson} fromPerson={testFromPerson}/>
+		<CreditCard cardInfo = {testCardInfo}/>
+	</div>,
 	document.querySelector('#root'));
 
 
