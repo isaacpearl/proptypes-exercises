@@ -39,3 +39,40 @@ envelope styles
 credit card styles
 */
 
+.credit-card {
+	position: relative;
+	width: 400px;
+	height: 250px;
+	border-radius: 25px;
+	margin: 10px;
+	padding: 15px;
+	background-color: #1759c4;
+	color: white;
+}
+
+.bank-name {
+	position: absolute; 
+	top: 30px;
+	left: 200px;
+	font-size: 2.5em;
+}
+
+.card-number {
+	position: absolute;
+	top: 160px;
+	left: 30px;
+	font-size: 2em;
+}
+
+.expiration-date {
+	position: absolute;
+	top: 210px;
+	left: 200px;
+}
+
+.cardholder-name {
+	position: absolute;
+	left: 30px;
+	top: 240px;
+}
+
