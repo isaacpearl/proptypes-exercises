@@ -157,11 +157,72 @@ var testPosterImage = "https://marketingweek.imgix.net/content/uploads/2017/05/1
 var testPosterTitle = "PROGRAMMING"
 var testPosterText = "Not even once."
 
+
+//EMAIL
+
+function Email({ email }) {
+	return (
+		<div className="email">
+			<EmailSender sender={email.sender}/>
+			<EmailSubject subject={email.subject}/>
+			<EmailDate date={email.date}/>
+			<EmailMessage message={email.message}/>
+			<CheckBox/>
+			<PinIcon/>
+		</div>
+	);
+}
+
+function EmailSender({ sender }) {
+	return(
+		<span className="email-sender">{sender}</span>
+	);
+}
+
+function EmailSubject({ subject }) {
+	return(
+		<span className="email-subject">{subject}</span>
+	);
+}
+
+function EmailDate({ date }) {
+	return(
+		<span className="email-date">{date}</span>
+	);
+}
+
+function EmailMessage({ message }) {
+	return(
+		<span className="email-message">{message}</span>
+	);
+}
+
+function CheckBox() {
+	return(
+		<input className="checkbox" type="checkbox"/>
+	);
+}
+
+function PinIcon() {
+	return(
+		<span className="pin-icon"></span>
+	);
+}
+
+
+var testEmail = {
+	sender: "Your Friend",
+	subject: "How are you?",
+	date: "01-23-19",
+	message: "It's been a while! I am emailing you."
+}
+
 ReactDOM.render(
 	<div>
 		<Envelope toPerson = {testToPerson} fromPerson={testFromPerson}/>
 		<CreditCard cardInfo = {testCardInfo}/>
 		<Poster image = {testPosterImage} title = {testPosterTitle} text = {testPosterText}/>
+		<Email email={testEmail}/>
 	</div>,
 	document.querySelector('#root'));
 

@@ -1,4 +1,17 @@
 /*
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+}
+*/
+
+
+/*
 envelope styles
 */
 
@@ -43,16 +56,16 @@ credit card styles
 	position: relative;
 	width: 400px;
 	height: 250px;
-	border-radius: 25px;
 	margin: 10px;
 	padding: 15px;
+	border-radius: 25px;
 	background-color: #1759c4;
 	color: white;
 	font-family: 'courier';
 	font-weight: 100;
 }
 
-.bank-name {
+.credit-card .bank-name {
 	position: absolute; 
 	top: 30px;
 	left: 200px;
