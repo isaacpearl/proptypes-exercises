@@ -163,37 +163,41 @@ var testPosterText = "Not even once."
 function Email({ email }) {
 	return (
 		<div className="email">
-			<EmailSender sender={email.sender}/>
-			<EmailSubject subject={email.subject}/>
-			<EmailDate date={email.date}/>
+			<div className="info">
+				<EmailSender sender={email.sender}/>
+				<EmailSubject subject={email.subject}/>
+				<EmailDate date={email.date}/>
+			</div>
 			<EmailMessage message={email.message}/>
-			<CheckBox/>
-			<PinIcon/>
+			<div className="buttons">
+				<CheckBox/>
+				<PinIcon/>
+			</div>
 		</div>
 	);
 }
 
 function EmailSender({ sender }) {
 	return(
-		<span className="email-sender">{sender}</span>
+		<span className="sender">{sender}</span>
 	);
 }
 
 function EmailSubject({ subject }) {
 	return(
-		<span className="email-subject">{subject}</span>
+		<span className="subject">{subject}</span>
 	);
 }
 
 function EmailDate({ date }) {
 	return(
-		<span className="email-date">{date}</span>
+		<span className="date">{date}</span>
 	);
 }
 
 function EmailMessage({ message }) {
 	return(
-		<span className="email-message">{message}</span>
+		<span className="message">{message}</span>
 	);
 }
 
@@ -205,10 +209,9 @@ function CheckBox() {
 
 function PinIcon() {
 	return(
-		<span className="pin-icon"></span>
+		<span className="fas fa-thumbtack pin-icon"></span>
 	);
 }
-
 
 var testEmail = {
 	sender: "Your Friend",
